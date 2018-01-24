@@ -45,7 +45,6 @@
                                 </state>
                                 <connections>
                                     <action selector="stopRecording:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ha6-qp-h2G"/>
-                                    <segue destination="VFJ-dQ-OvY" kind="show" id="2vH-tb-a8b"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -69,16 +68,17 @@
                         <outlet property="recordButton" destination="AlS-6z-ZhJ" id="rsk-Xz-4Eh"/>
                         <outlet property="recordingLabel" destination="pfg-4a-Tko" id="w7C-XU-wTS"/>
                         <outlet property="stopRecordingButton" destination="JwF-2h-ICs" id="dw5-Z7-Tfc"/>
+                        <segue destination="VFJ-dQ-OvY" kind="show" identifier="stopRecording" id="THm-0r-kL4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="815.20000000000005" y="133.5832083958021"/>
         </scene>
-        <!--View Controller-->
+        <!--Play Sounds View Controller-->
         <scene sceneID="CYh-rG-qa0">
             <objects>
-                <viewController id="VFJ-dQ-OvY" sceneMemberID="viewController">
+                <viewController id="VFJ-dQ-OvY" customClass="PlaySoundsViewController" customModule="PitchPerfect" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yFj-w6-HIP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -93,6 +93,7 @@
         <!--Navigation Controller-->
         <scene sceneID="sCs-qo-MhV">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sBD-bZ-MZg" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Vpn-TX-Rhy" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="2Tz-b4-qTr">
@@ -102,9 +103,9 @@
                     <nil name="viewControllers"/>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="ofa-Tx-iy7"/>
+                        <segue destination="BYZ-38-t0r" kind="show" id="oVC-Yy-xd6"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="sBD-bZ-MZg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="14" y="134"/>
         </scene>
@@ -113,4 +114,7 @@
         <image name="RecordButton" width="155" height="155"/>
         <image name="Stop" width="155" height="155"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="ofa-Tx-iy7"/>
+    </inferredMetricsTieBreakers>
 </document>
